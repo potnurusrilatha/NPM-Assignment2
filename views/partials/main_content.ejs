@@ -1,0 +1,43 @@
+<% if(locals.main_content_page){ %>
+    <% if(locals.main_content_page === "home") { %>
+        <div class="Welcome_description">
+            <h2 class="welcome_text">welcome to jewelery website</h2>
+            <div class="jewelery description">
+                <p>Welcome to Sree's jewelry, where luxury meets craftsmanship. Explore our exquisite collection of handcrafted fine jewelry, including rings, necklaces, bracelets, earrings, and custom designs. Each piece is meticulously crafted with high-quality materials such as gold, silver, diamonds, and gemstones, ensuring beauty that lasts a lifetime.</p>
+            </div>
+        
+<% } else if(locals.main_content_description === "gold") { %>
+    <div class="Welcome_description">
+        <h2 class="welcome_text">welcome to jewelery website</h2>
+        <div class="jewelery description">
+            <p>Welcome to Sree's jewelry Gold page, where luxury meets craftsmanship. Explore our exquisite collection of handcrafted fine jewelry, including rings, necklaces, bracelets, earrings, and custom designs. Each piece is meticulously crafted with high-quality materials such as gold, silver, diamonds, and gemstones, ensuring beauty that lasts a lifetime.</p>
+        </div>
+<% } else if(locals.main_content_description === "silver") { %>
+            <div class="Welcome_description">
+                <h2 class="welcome_text">welcome to jewelery website</h2>
+                <div class="jewelery description">
+                    <p>Welcome to Sree's jewelry silver page, where luxury meets craftsmanship. Explore our exquisite collection of handcrafted fine jewelry, including rings, necklaces, bracelets, earrings, and custom designs. Each piece is meticulously crafted with high-quality materials such as gold, silver, diamonds, and gemstones, ensuring beauty that lasts a lifetime.</p>
+                </div>
+<% } else if(locals.main_content_description === "diamond") { %>
+            <div class="Welcome_description">
+                <h2 class="welcome_text">welcome to jewelery website</h2>
+                <div class="jewelery description">
+                     <p>Welcome to Sree's jewelry Diamong page, where luxury meets craftsmanship. Explore our exquisite collection of handcrafted fine jewelry, including rings, necklaces, bracelets, earrings, and custom designs. Each piece is meticulously crafted with high-quality materials such as gold, silver, diamonds, and gemstones, ensuring beauty that lasts a lifetime.</p>
+                </div>
+<% } else if(locals.main_content_page === "jewelery") { %>
+    <div class="main_content_description">
+        <h1 class="header_title">jewelery Name <%=animal.name %></h1>
+        <h2 class="type">Type <%=jewelery.type %></h2>
+        <img src="/images/<%=jewelery.name%>.jpg" alt="jewelery_image" width="250px" height="auto">
+        <p><strong>purity</strong><%= jewelery.purity%> </p>
+        <p><strong>priceRange</strong><%= jewelery.priceRange%></p>
+        <p><strong>description</strong><%= jewelery.description%></p>
+        <p><strong>weight</strong><%= jewelery.weight%></p>
+        <p><strong>origin</strong><%= jewelery.origin%></p>
+        <p><strong>src</strong><%= jewelery.src%></p>
+        <p><strong>category</strong><%= jewelery.category%></p>
+        <p><strong>categoryLink</strong><%= jewelery.categoryLink%></p>
+    </div>
+
+<% } %>
+<% } %>

@@ -1,0 +1,138 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: blanchedalmond;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    flex-direction: column;
+
+}
+
+body.gold {
+    background-color: goldenrod;
+}
+
+body.diamond {
+    background-color: darkcyan;
+}
+body.silver {
+    background-color: rgb(92, 187, 54);
+}
+
+.wrapper {
+    display: flex;
+    width: 100%;
+    height: 100vh
+}
+
+.header {
+    display: flex;
+    align-items: center;
+}
+
+.header_container {
+    color: brown;
+    flex-grow: 1;
+    text-align: center;
+}
+
+.header__title {
+    font-size: 3rem;
+}
+
+.logo {
+    height: 100px;
+    width: auto;
+}
+
+.nav_menu {
+    display: flex;
+    justify-content: space-between;
+    padding: 4px ;
+    list-style: none;
+    gap: 20px;
+}
+
+.menu:hover {
+   background-color: rgb(136, 134, 120);
+   color: #283618;
+   border-radius: 5px;
+}
+.sidebar {
+    width: 250px;
+    background-color: blanchedalmond;
+    color: white;
+    padding: 20px;
+    height: 100vh;
+   
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin: 15px 0;
+}
+
+.sidebar ul li a {
+    color: rgb(12, 168, 25);
+    text-decoration: none;
+}
+
+/* Main content styles */
+.content {
+    flex-grow: 1;
+    padding: 20px;
+    background-color: blanchedalmond;
+}
+
+.content h1 {
+    color: #2c3e50;
+}
+.footer {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    color: rgb(133, 15, 15);
+    gap: 24px;
+    padding: 24px;
+}
+
+.footer-copyright{
+    font-size: 1.5rem;
+}
+
+.footer-logo h2 {
+    font-size: 2rem;
+}
+
+.footer-contact h4 {
+    font-size: 1.4rem;
+}
+
+.footer-contact p {
+    font-size: 1rem;
+}
+
+.footer_social-media h4 {
+    font-size: 1.4rem;
+}
+
+.footer-logo img {
+    width: 100px;
+    height: auto;
+}
+
+@media screen and (max-width:768px) {
+    .header {
+        display: block;
+    }
+    .header__image {
+        display: block;
+        margin: auto;
+    }
+}
