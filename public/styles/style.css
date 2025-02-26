@@ -1,4 +1,4 @@
-* {
+/* * {
     box-sizing: border-box;
 }
 
@@ -19,13 +19,6 @@ body.diamond {
 }
 body.silver {
     background-color: rgb(92, 187, 54);
-}
-
-.wrapper {
-    display: flex;
-    width: 100%;
-    height: 100vh
-    
 }
 
 .header {
@@ -55,6 +48,15 @@ body.silver {
     list-style: none;
     gap: 20px;
 }
+.nav_menu a {
+    border: 1 px solid #283618;
+    color: #05adc4;
+    font-size: 1.2rem;
+    box-shadow: 0 0 5px #05adc4 0 0 5px #05adc4 inset;
+    transition: all 0.3s ease;
+    padding: 8px;
+}
+
 
 .menu:hover {
    background-color: rgb(136, 134, 120);
@@ -65,14 +67,11 @@ body.silver {
 .sidebar {
     background-color: blanchedalmond;
     color: rgb(216, 19, 19);
-    flex: 0 0 30%;
-    flex-grow: 1;
+    flex: 0 0 20%;
     padding: 20px;
     height: 100vh;
     width: 250px; 
 }
-
-
 
 .sidebar ul {
     list-style-type: none;
@@ -91,11 +90,80 @@ body.silver {
     font-size: 18px;
     display: block;
     border-radius: 10px;
-    
-    
 }
 
-/* Main content styles */
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    position: relative;
+
+}
+
+.welcome_description,
+.main_content_description {
+    align-content: center;
+    flex-basis: 80%;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    font-size: 1.5rem;
+    margin: 48px;
+    background-color: rgba(36, 34, 34, 0.15);
+    backdrop-filter: blur(5px);
+}
+
+.welcome_text {
+    color: rgb(202, 11, 11);
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.jewelry_description {
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.jewelry_description  p {
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.jewelry_grid {
+    display: flex;
+    flex-direction: column;
+}
+
+.jewelry_grid_items {
+    display: flex;
+    flex-direction: column;
+}
+
+.jewelry_grid_items a {
+    padding: 8px;
+    cursor: pointer;
+    font-size: 1.5rem;
+    color: #2c3e50;
+}
+
+.jewelry_grid_items p {
+    padding: 8px;
+   margin-left: 35%;
+}
+
+.main_content {
+    flex-basis: 80%;
+    color: white;
+    display: flex;
+    justify-content: center;
+    margin-top: 5%;
+    padding: 16px;
+    flex-grow: 0;
+    width: 100%;
+}
+
+
+/* Main content styles 
 .content {
     flex-grow: 1;
     padding: 20px;
@@ -112,6 +180,8 @@ body.silver {
     color: rgb(133, 15, 15);
     gap: 24px;
     padding: 24px;
+    flex-direction: row;
+    width: 100%;
 }
 
 .footer-copyright{
@@ -137,7 +207,7 @@ body.silver {
 }
 
 .footer-logo img {
-    width: 100px;
+    width: 50px;
     height: auto;
 }
 
@@ -148,5 +218,300 @@ body.silver {
     .header__image {
         display: block;
         margin: auto;
+    }
+} */
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: blanchedalmond;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    flex-direction: column;
+
+}
+
+body.gold {
+    background-color: goldenrod;
+}
+
+body.diamond {
+    background-color: darkcyan;
+}
+body.silver {
+    background-color: rgb(92, 187, 54);
+}
+
+.header {
+    display: flex;
+    align-items: center;
+}
+
+.header_container {
+    color: brown;
+    flex-grow: 1;
+    text-align: center;
+}
+
+.header__title {
+    font-size: 3rem;
+}
+
+.logo {
+    height: 100px;
+    width: auto;
+}
+
+.nav_menu {
+    display: flex;
+    justify-content: space-between;
+    padding: 4px ;
+    list-style: none;
+    gap: 20px;
+}
+.nav_menu a {
+    border: 1 px solid #283618;
+    color: #05adc4;
+    font-size: 1.2rem;
+    box-shadow: 0 0 5px #05adc4 0 0 5px #05adc4 inset;
+    transition: all 0.3s ease;
+    padding: 8px;
+}
+
+
+.menu:hover {
+   background-color: rgb(136, 134, 120);
+   color: #283618;
+   border-radius: 5px;
+}
+
+/* Wrapper to contain sidebar, main content, and footer */
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ensures the page takes up the full viewport height */
+}
+
+/* Sidebar styling */
+.sidebar {
+    width: 250px;
+    padding: 15px;
+    position:absolute; /* Fixes the sidebar on the left */
+    left: 0;
+    overflow-y: auto; /* Scroll when content is long */
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.sidebar-btn {
+    width: 100%;
+    padding: 12px;
+    background: #d4af37; /* Gold color */
+    color: rgb(29, 28, 28);
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    text-align: center;
+}
+
+.sidebar-btn:hover {
+    color: #0f0bdf;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin: 15px 0;
+    letter-spacing: 2px;
+}
+
+.sidebar ul li a {
+    color: rgb(12, 168, 25);
+    text-decoration: none;
+    padding: 10px 0;
+    font-size: 18px;
+    display: block;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.sidebar ul li a:hover {
+    background-color: rgb(12, 168, 25);
+    color: white;
+}
+
+/* Main content styling */
+.main_content {
+    margin-left: 260px; /* Pushes the content right to avoid overlap with sidebar */
+    padding: 48px;
+    flex-grow: 1;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Welcome and category descriptions */
+.Welcome_description,
+.main_content_description {
+    width: 60%;
+    text-align: center;
+    padding: 20px;
+    background-color: rgba(36, 34, 34, 0.15);
+    backdrop-filter: blur(5px);
+    margin: 20px auto;
+    border-radius: 10px;
+}
+
+.welcome_text {
+    color: rgb(202, 11, 11);
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+/* Jewelry description */
+.jewelry_description p {
+    font-size: 1.5rem;
+    color: #333;
+}
+
+/* Jewelry Grid */
+.jewelry_grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.jewelry_grid_items {
+    background: #fff;
+    padding: 16px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.jewelry_grid_items:hover {
+    transform: scale(1.05);
+}
+
+.jewelry_grid_items a {
+    display: block;
+    text-decoration: none;
+    font-size: 1.2rem;
+    color: #2c3e50;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.jewelry_grid_items p {
+    font-size: 1rem;
+    color: #555;
+}
+
+/* Jewelry details page */
+.main_content_description img {
+    margin-top: 10px;
+    border-radius: 8px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.main_content_description p {
+    font-size: 1.2rem;
+    margin: 10px 0;
+}
+
+/* Footer 
+.footer {
+    width: 100%;
+    background: blanchedalmond;
+    text-align: center;
+    padding: 20px;
+    margin-top: auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.footer-logo h2 {
+    font-size: 2rem;
+}
+
+.footer-contact h4,
+.footer-contact p,
+.footer_social-media h6 {
+    font-size: 1rem;
+}*/
+
+.footer {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    color: rgb(133, 15, 15);
+    gap: 24px;
+    padding: 20px;
+    flex-direction: row;
+    width: 100%;
+    margin-top: auto;
+    flex-wrap: wrap;
+}
+
+.footer-copyright{
+    font-size: 1rem;
+    text-align: center;
+}
+
+.footer-logo h2 {
+    font-size: 2rem;
+    
+}
+
+.footer-contact h4 {
+    font-size: 1rem;
+}
+
+.footer-contact p {
+    font-size: 1rem;
+}
+
+.footer_social-media h6 {
+    font-size: 1rem;
+}
+
+.footer-logo img {
+    width: 50px;
+    height: auto;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+    }
+
+    .main_content {
+        margin-left: 0;
+        padding: 20px;
+    }
+
+    .footer {
+        flex-direction: column;
+        gap: 10px;
     }
 }

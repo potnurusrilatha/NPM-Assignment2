@@ -1,46 +1,114 @@
 <% if(locals.main_content_description){ %>
-    <% if(locals.main_content_description === "home") { %>
+    <% if(locals.main_content_description==="home" ) { %>
         <div class="Welcome_description">
             <h2 class="welcome_text">Welcome to Sree's jewelry website</h2>
-            <div class="jewelry description">
-                <p>Welcome to Sree's jewelry, where luxury meets craftsmanship. Explore our exquisite collection of handcrafted fine jewelry, including rings, necklaces, bracelets, earrings, and custom designs. Each piece is meticulously crafted with high-quality materials such as gold, silver, diamonds, and gemstones, ensuring beauty that lasts a lifetime.</p>
+            <div class="jewelry_description">
+                <p>Welcome to Sree's jewelry, where luxury meets craftsmanship. Explore our exquisite collection of
+                    handcrafted fine jewelry, including rings, necklaces, bracelets, earrings, and custom designs. Each
+                    piece is meticulously crafted with high-quality materials such as gold, silver, diamonds, and
+                    gemstones, ensuring beauty that lasts a lifetime.</p>
             </div>
-        </div>
-        
-<% } else if(locals.main_content_description === "gold") { %>
-    <div class="Welcome_description">
-        <h2 class="welcome_text">Welcome to Gold Page</h2>
-        <div class="jewelry description">
-            <p>Welcome to Sree's jewelry Gold page, where luxury meets craftsmanship. Explore our exquisite collection of handcrafted fine jewelry, including rings, necklaces, bracelets, earrings, and custom designs. Each piece is meticulously crafted with high-quality materials such as gold, silver, diamonds, and gemstones, ensuring beauty that lasts a lifetime.</p>
-        </div>
-    </div>
-<% } else if(locals.main_content_description === "silver") { %>
-            <div class="Welcome_description">
-                <h2 class="welcome_text">welcome to Silver Page</h2>
-                <div class="jewelry description">
-                    <p>Welcome to Sree's jewelry silver page, where luxury meets craftsmanship. Explore our exquisite collection of handcrafted fine jewelry, including rings, necklaces, bracelets, earrings, and custom designs. Each piece is meticulously crafted with high-quality materials such as gold, silver, diamonds, and gemstones, ensuring beauty that lasts a lifetime.</p>
-                </div>
-            </div>
-<% } else if(locals.main_content_description === "diamond") { %>
-            <div class="Welcome_description">
-                <h2 class="welcome_text">welcome to Diamond page</h2>
-                <div class="jewelry description">
-                     <p>Welcome to Sree's jewelry Diamong page, where luxury meets craftsmanship. Explore our exquisite collection of handcrafted fine jewelry, including rings, necklaces, bracelets, earrings, and custom designs. Each piece is meticulously crafted with high-quality materials such as gold, silver, diamonds, and gemstones, ensuring beauty that lasts a lifetime.</p>
-                </div>
-            </div>
-<% } else if(locals.main_content_description === "jewelry") { %>
-    <div class="main_content_description">
-        <h1 class="header_title">Jewelry Name: <%=jewelry.name %></h1>
-        <h2 class="type">Jewelry Type: <%=jewelry.type %></h2>
-        <img src="/images/<%=jewelry.name%>.jpg" alt="Jewelry_image:" width="250px" height="auto">
-        <p><strong>Purity:</strong><%= jewelry.purity%> </p>
-        <p><strong>PriceRange:</strong><%= jewelry.priceRange%></p>
-        <p><strong>Description:</strong><%= jewelry.description%></p>
-        <p><strong>Weight:</strong><%= jewelry.weight%></p>
-        <p><strong>Origin:</strong><%= jewelry.origin%></p>
-        <p><strong>Category:</strong><%= jewelry.category%></p>
-        <p><strong>CategoryLink:</strong><%= jewelry.categoryLink%></p>
-    </div>
+            <!-- <div class="jewelry_grid">
+                <% jewelry_name.forEach(jewelry=> { %>
+                    <div class="jewelry_grid_items">
+                        <a href="/<%=jewelry.type%>/<%=jewelry.name.replace(" ", " _")%>"><%=jewelry.name%></a><br>
+                        <p>
+                            <%= jewelry_name %>
+                        </p>
+                    </div>
 
-<% } %>
-<% } %>
+                    <% }) %>
+            </div> -->
+        </div>
+
+        <% } else if(locals.main_content_description==="gold" ) { %>
+            <div class="Welcome_description">
+                <h2 class="welcome_text">Welcome to Gold Page</h2>
+                <div class="jewelry_description">
+                    <p>Welcome to Sree's jewelry Gold page, Indulge in the timeless elegance of our exquisite gold jewelry collection. 
+                        Each piece is meticulously crafted to perfection, using the highest quality gold, 
+                        ranging from **18K to 24K purity**. Whether you're looking for traditional designs 
+                        or contemporary styles, our gold collection has something for everyone.</p>
+                </div>
+                <!-- <div class="jewelry_grid">
+                    <% jewelry_name.forEach(jewelry=> { %>
+                        <div class="grid_items">
+                            <a href="/<%=jewelry.type%>/<%=jewelry.name.replace(" ", " _")%>"><%=jewelry.name%></a><br>
+                            <p>
+                                <%= jewelry_name %>
+                            </p>
+                        </div>
+
+                        <% }) %>
+                </div> -->
+                <% } else if(locals.main_content_description==="silver" ) { %>
+                    <div class="Welcome_description">
+                        <h2 class="welcome_text">Welcome to Silver Page</h2>
+                        <div class="jewelry_description">
+                            <p>Welcome to Sree's jewelry silver page, Experience the elegance and versatility of our stunning **silver jewelry collection**. 
+                                Designed to suit all occasions, our handcrafted silver pieces offer the perfect 
+                                blend of tradition and modern style.
+                            </p>
+                        </div>
+                        <!-- <div class="jewelry_grid">
+                            <% jewelry_name.forEach(jewelry=> { %>
+                                <div class="grid_items">
+                                    <a href="/<%=jewelry.type%>/<%=jewelry.name.replace(" ", " _")%>"><%=jewelry.name%></a><br>
+                                    <p><%= jewelry_name %></p>
+                                </div>
+
+                                <% }) %>
+                        </div> -->
+                        <% } else if(locals.main_content_description==="diamond" ) { %>
+                            <div class="Welcome_description">
+                                <h2 class="welcome_text">Welcome to Diamond page</h2>
+                                <div class="jewelry_description">
+                                    <p>Welcome to Sree's jewelry Diamong page, Elevate your elegance with our breathtaking **diamond jewelry collection**. 
+                                        Each diamond is **hand-selected** for its brilliance and clarity, ensuring 
+                                        that every piece reflects the highest level of craftsmanship.
+                                    </p>
+                                </div>
+                                <!-- <div class="jewelry_grid">
+                                    <% jewelry_name.forEach(jewelry=> { %>
+                                        <div class="grid_items">
+                                            <a href="/<%=jewelry.type%>/<%=jewelry.name.replace(" ", " _")%>"><%=jewelry.name%></a><br>
+                                            <p>
+                                                <%= jewelry_name%>
+                                            </p>
+                                        </div>
+
+                                        <% }) %> 
+                                </div> -->
+                                <% } else if(locals.main_content_description==="jewelry" ) { %>
+                                    <div class="main_content_description">
+                                        <h1 class="header_title">Jewelry Name: <%=jewelry.name %>
+                                        </h1>
+                                        <h2 class="type">Jewelry Type: <%=jewelry.type %>
+                                        </h2>
+                                        <img src="/images/<%=jewelry.name%>.jpg" alt="Jewelry_image:" width="250px"
+                                            height="auto">
+                                        <p><strong>Purity:</strong>
+                                            <%= jewelry.purity%>
+                                        </p>
+                                        <p><strong>PriceRange:</strong>
+                                            <%= jewelry.priceRange%>
+                                        </p>
+                                        <p><strong>Description:</strong>
+                                            <%= jewelry.description%>
+                                        </p>
+                                        <p><strong>Weight:</strong>
+                                            <%= jewelry.weight%>
+                                        </p>
+                                        <p><strong>Origin:</strong>
+                                            <%= jewelry.origin%>
+                                        </p>
+                                        <p><strong>Category:</strong>
+                                            <%= jewelry.category%>
+                                        </p>
+                                        <p><strong>CategoryLink:</strong>
+                                            <%= jewelry.categoryLink%>
+                                        </p>
+                                    </div>
+
+                        <% } %>
+                <% } %>
