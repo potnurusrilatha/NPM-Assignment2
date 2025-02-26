@@ -1,26 +1,59 @@
 import express from "express"
-import { goldArray, jewelryArray} from "../data/jewelery";
+import { goldArray, jewelryArray} from "../data/jewelry.js";
 
 const goldRouter = express.Router();
 
 goldRouter.get("/", (req,res) =>{
-    res.render("pages/jewelery_info", {
-        style_file_name : "home",
+    res.render("pages/home.ejs", {
         bodyClass:"home",
-        header_class: "home",
-        main_content_page : "home",
+        head_Title: "home",
+        title : "Welcome to GoldPage",
+        main_content_description : "gold",
         welcome_text: "Gold",
-        jewelry_names : goldArray
-       
+        jewelry_name : goldArray 
     })
 })
 
-goldRouter.get("/earrings", (req,res) =>{
-    res.send("It has different models of earrings")
+goldRouter.get("/Gold_Necklace", (req,res) =>{
+    let goldNecklace = goldArray[0];
+    res.render("pages/home.ejs",{
+        head_Title: "home",
+        title : "Welcome to GoldNecklace",
+        bodyClass:"gold",
+        welcome_text: "Gold - GoldNecklace ",
+        main_content_description :"jewelry",
+        jewelry: goldNecklace,
+        jewelry_name: goldArray
+
+    })
 })
 
-goldRouter.get("/chains", (req,res) =>{
-    res.send("shows different models of chains")
+goldRouter.get("/Gold_Ring", (req,res) =>{
+    let goldRing = goldArray[1];
+    res.render("pages/home.ejs",{
+        head_Title: "home",
+        title: "Welcome to GoldRing",
+        bodyClass:"gold",
+        welcome_text: "Gold - GoldRing",
+        main_content_description :"jewelry",
+        jewelry: goldRing,
+        jewelry_name: goldArray
+    })
 })
+
+
+goldRouter.get("/Gold_Bracelet", (req,res) =>{
+    let goldBracelet = goldArray[2];
+    res.render("pages/home.ejs",{
+        bodyClass: "gold",
+        head_Title : "home",
+        title: "Welcome to GoldBracelet",
+        welcome_text: "Gold - GoldBracelet",
+        main_content_description: "jewelry",
+        jewelry: goldBracelet,
+        jewelry_name: goldArray
+    })
+})
+
 
 export default goldRouter;

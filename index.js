@@ -1,13 +1,13 @@
 import express from "express";
 import * as path from "path";
-import { jewelryArray } from "./data/jewelery.js";
+import { jewelryArray } from "./data/jewelry.js";
 import goldRouter from "./routes/GoldRouter.js";
 import diamondRouter from "./routes/diamondRouter.js";
 import silverRouter from "./routes/SilverRouter.js";
 
 const app = express();
 const PORT = 3000;
-const__dirname = path.resolve();
+const __dirname = path.resolve();
 
 app.set("views", path.join(__dirname,"views"));
 app.set("view engine", "ejs");
@@ -16,11 +16,12 @@ app.use(express.static(path.join(__dirname,"public")))
 
 app.get("/",(req,res) => {
     res.render("pages/home.ejs", {
-        jewelry : jewelryArray,
-        main_content_page: "home",
+        head_Title : "home",
+        title : "Sree's Jewelery Website",
+        main_content_description: "home",
         body_class_name : "home",
         welcome_text : "Jewelry Website",
-        jewelry_names : jewelryArray
+        jewelry_name : jewelryArray
     })
 })
 

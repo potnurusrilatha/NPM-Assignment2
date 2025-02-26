@@ -1,42 +1,45 @@
-<% if(locals.main_content_page){ %>
-    <% if(locals.main_content_page === "home") { %>
+<% if(locals.main_content_description){ %>
+    <% if(locals.main_content_description === "home") { %>
         <div class="Welcome_description">
-            <h2 class="welcome_text">welcome to jewelery website</h2>
-            <div class="jewelery description">
+            <h2 class="welcome_text">Welcome to Sree's jewelry website</h2>
+            <div class="jewelry description">
                 <p>Welcome to Sree's jewelry, where luxury meets craftsmanship. Explore our exquisite collection of handcrafted fine jewelry, including rings, necklaces, bracelets, earrings, and custom designs. Each piece is meticulously crafted with high-quality materials such as gold, silver, diamonds, and gemstones, ensuring beauty that lasts a lifetime.</p>
             </div>
+        </div>
         
 <% } else if(locals.main_content_description === "gold") { %>
     <div class="Welcome_description">
-        <h2 class="welcome_text">welcome to jewelery website</h2>
-        <div class="jewelery description">
+        <h2 class="welcome_text">Welcome to Gold Page</h2>
+        <div class="jewelry description">
             <p>Welcome to Sree's jewelry Gold page, where luxury meets craftsmanship. Explore our exquisite collection of handcrafted fine jewelry, including rings, necklaces, bracelets, earrings, and custom designs. Each piece is meticulously crafted with high-quality materials such as gold, silver, diamonds, and gemstones, ensuring beauty that lasts a lifetime.</p>
         </div>
+    </div>
 <% } else if(locals.main_content_description === "silver") { %>
             <div class="Welcome_description">
-                <h2 class="welcome_text">welcome to jewelery website</h2>
-                <div class="jewelery description">
+                <h2 class="welcome_text">welcome to Silver Page</h2>
+                <div class="jewelry description">
                     <p>Welcome to Sree's jewelry silver page, where luxury meets craftsmanship. Explore our exquisite collection of handcrafted fine jewelry, including rings, necklaces, bracelets, earrings, and custom designs. Each piece is meticulously crafted with high-quality materials such as gold, silver, diamonds, and gemstones, ensuring beauty that lasts a lifetime.</p>
                 </div>
+            </div>
 <% } else if(locals.main_content_description === "diamond") { %>
             <div class="Welcome_description">
-                <h2 class="welcome_text">welcome to jewelery website</h2>
-                <div class="jewelery description">
+                <h2 class="welcome_text">welcome to Diamond page</h2>
+                <div class="jewelry description">
                      <p>Welcome to Sree's jewelry Diamong page, where luxury meets craftsmanship. Explore our exquisite collection of handcrafted fine jewelry, including rings, necklaces, bracelets, earrings, and custom designs. Each piece is meticulously crafted with high-quality materials such as gold, silver, diamonds, and gemstones, ensuring beauty that lasts a lifetime.</p>
                 </div>
-<% } else if(locals.main_content_page === "jewelery") { %>
+            </div>
+<% } else if(locals.main_content_description === "jewelry") { %>
     <div class="main_content_description">
-        <h1 class="header_title">jewelery Name <%=animal.name %></h1>
-        <h2 class="type">Type <%=jewelery.type %></h2>
-        <img src="/images/<%=jewelery.name%>.jpg" alt="jewelery_image" width="250px" height="auto">
-        <p><strong>purity</strong><%= jewelery.purity%> </p>
-        <p><strong>priceRange</strong><%= jewelery.priceRange%></p>
-        <p><strong>description</strong><%= jewelery.description%></p>
-        <p><strong>weight</strong><%= jewelery.weight%></p>
-        <p><strong>origin</strong><%= jewelery.origin%></p>
-        <p><strong>src</strong><%= jewelery.src%></p>
-        <p><strong>category</strong><%= jewelery.category%></p>
-        <p><strong>categoryLink</strong><%= jewelery.categoryLink%></p>
+        <h1 class="header_title">Jewelry Name: <%=jewelry.name %></h1>
+        <h2 class="type">Jewelry Type: <%=jewelry.type %></h2>
+        <img src="/images/<%=jewelry.name%>.jpg" alt="Jewelry_image:" width="250px" height="auto">
+        <p><strong>Purity:</strong><%= jewelry.purity%> </p>
+        <p><strong>PriceRange:</strong><%= jewelry.priceRange%></p>
+        <p><strong>Description:</strong><%= jewelry.description%></p>
+        <p><strong>Weight:</strong><%= jewelry.weight%></p>
+        <p><strong>Origin:</strong><%= jewelry.origin%></p>
+        <p><strong>Category:</strong><%= jewelry.category%></p>
+        <p><strong>CategoryLink:</strong><%= jewelry.categoryLink%></p>
     </div>
 
 <% } %>
