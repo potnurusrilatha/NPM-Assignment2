@@ -1,10 +1,5 @@
-<!-- <div class = "sidebar">
-        <% jewelry_name.forEach(jewelry => { %>
-            <a href="/<%=jewelry.type%>/<%=jewelry.name.replace(" ", "_")%>"><%=jewelry.name%></a><br>  
-       <% }) %>
-</div> -->
-
-<div class="sidebar">
+<div class="container">
+    <aside class="sidebar">
     <% jewelry_name.forEach(jewelry => { %>
         <a href="/<%=jewelry.type%>/<%=jewelry.name.replace(' ', '_')%>" class="sidebar-link">
             <button class="sidebar-btn">
@@ -12,4 +7,5 @@
             </button>
         </a>
     <% }) %>
+</aside>
 </div>
