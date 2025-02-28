@@ -25,8 +25,8 @@ app.get("/",(req,res) => {
     })
 })
 
-app.use("/gold", goldRouter)
-app.use("/diamond", diamondRouter)
-app.use("/silver", silverRouter)
+app.use("/Gold", goldRouter)
+app.use("/Diamond", diamondRouter)
+app.use("/Silver", silverRouter)
 
 app.listen(PORT, () => console.log(`Server is running on port ${PORT}`))

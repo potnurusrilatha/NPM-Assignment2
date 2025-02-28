@@ -1,6 +1,6 @@
 import express from "express"
 import { goldArray, jewelryArray} from "../data/jewelry.js";
-
+ 
 const goldRouter = express.Router();
 
 goldRouter.get("/", (req,res) =>{
@@ -8,9 +8,9 @@ goldRouter.get("/", (req,res) =>{
         bodyClass:"home",
         head_Title: "home",
         title : "Welcome to GoldPage",
-        main_content_description : "gold",
+        main_content_description : "Gold",
         welcome_text: "Gold",
-        jewelry_name : goldArray 
+        jewelry_name : goldArray
     })
 })
 
@@ -19,8 +19,8 @@ goldRouter.get("/Gold_Necklace", (req,res) =>{
     res.render("pages/home.ejs",{
         head_Title: "home",
         title : "Welcome to GoldNecklace",
-        bodyClass:"gold",
-        welcome_text: "Gold - GoldNecklace ",
+        bodyClass:"Gold",
+        welcome_text: "gold - GoldNecklace ",
         main_content_description :"jewelry",
         jewelry: goldNecklace,
         jewelry_name: goldArray
