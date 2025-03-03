@@ -1,6 +1,6 @@
 <aside class="sidebar">
     <% jewelry_name.forEach(jewelry => { %>
-        <a href="/<%=jewelry.type%>/<%= jewelry.name.toLowerCase().replace(/ /g, "_")%>" class="sidebar-link">
+        <a href="/<%=jewelry.type.toLowerCase()%>/<%= jewelry.name.toLowerCase().replace(/ /g, "_")%>" class="sidebar-link">
             <button class="sidebar-btn">
                 <%= jewelry.name %>
             </button>
