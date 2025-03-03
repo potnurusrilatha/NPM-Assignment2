@@ -57,7 +57,8 @@
                                         </h1>
                                         <h2 class="type">Jewelry Type: <%=jewelry.type %>
                                         </h2>
-                                        <img src="/images/<%=jewelry.name.replace(' ', '_')%>.jpg" alt="Jewelry_image:" width="250px"
+                                        <img src="/images/<%= jewelry.name.toLowerCase().replace(/ /g, "_") %>.jpg" 
+                                        alt="<%= jewelry.name %>" width="250px"
                                             height="auto">
 
                                         <p><strong>Purity:</strong>
