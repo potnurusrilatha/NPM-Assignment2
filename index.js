@@ -1,12 +1,15 @@
 import express from "express";
 import * as path from "path";
 import { jewelryArray } from "./data/jewelry.js";
-import goldRouter from "./routes/GoldRouter.js";
+import goldRouter from "./routes/goldRouter.js";
 import diamondRouter from "./routes/diamondRouter.js";
 import silverRouter from "./routes/SilverRouter.js";
+import * as dotenv from "dotenv"
+
+dotenv.config();
 
 const app = express();
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 const __dirname = path.resolve();
 
 app.set("views", path.join(__dirname,"views"));
