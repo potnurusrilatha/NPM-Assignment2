@@ -3,7 +3,7 @@ import * as path from "path";
 import { jewelryArray } from "./data/jewelry.js";
 import goldRouter from "./routes/GoldRouter.js";
 import diamondRouter from "./routes/DiamondRouter.js";
-import silverRouter from "./routes/SilverRouter.js";
+import silverRouter from "./routes/silverRouter.js";
 import * as dotenv from "dotenv"
 
 dotenv.config();
