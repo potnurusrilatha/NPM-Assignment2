@@ -2,7 +2,7 @@ import express from "express";
 import * as path from "path";
 import { jewelryArray } from "./data/jewelry.js";
 import goldRouter from "./routes/GoldRouter.js";
-import diamondRouter from "./routes/DiamondRouter.js";
+import diamondRouter from "./routes/diamondRouter.js";
 import silverRouter from "./routes/silverRouter.js";
 import * as dotenv from "dotenv"
 
